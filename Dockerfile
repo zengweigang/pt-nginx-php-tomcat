@@ -1,4 +1,3 @@
-#环境的基础镜像  镜像名字  docker.36b.me/nginx-php-tomcat:latest
 FROM       centos:centos7.1.1503
 MAINTAINER zengweigang <zengweigang@gmail.com>
 
@@ -22,7 +21,7 @@ RUN mkdir -p /etc/supervisor.conf.d && \
 # Set environment variable
 ENV	APP_DIR /app
 
-RUN	yum -y install nginx php-cli php-mysql php-pear php-ldap php-mbstring php-soap php-dom php-gd php-xmlrpc php-fpm php-mcrypt java-1.8.0-openjdk-devel.x86_64 && \ 
+RUN	yum -y install nginx php-cli php-mysql php-pear php-pecl-memcache php-ldap php-mbstring php-soap php-dom php-gd php-xmlrpc php-fpm php-mcrypt java-1.8.0-openjdk-devel.x86_64 && \ 
 	yum clean all
 
 ADD nginx_nginx.conf /etc/nginx/nginx.conf
