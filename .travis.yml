@@ -9,7 +9,7 @@ os:
 - linux
 env:
   global:
-  - RDS_ADDRESS=127.0.0.1 
+  - RDS_ADDRESS=127.0.0.1
 install:
 script: ./deploy.sh
 cache:
